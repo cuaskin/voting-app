@@ -2,6 +2,10 @@ const path = require('path');
 
 const nextConfig = {
   useFileSystemPublicRoutes: false,
+  publicRuntimeConfig: {
+    LOCAL_GRAPHQL_HOST: process.env.LOCAL_GRAPHQL_HOST,
+    TEST_API_HOST: process.env.TEST_API_HOST,
+  },
   webpack: function (config) {
     config.resolve.alias['hoc'] = path.resolve(__dirname, 'hoc');
     config.resolve.alias['store'] = path.resolve(__dirname, 'store');
