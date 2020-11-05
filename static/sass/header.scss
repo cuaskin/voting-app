@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+ul {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  vertical-align: middle;
+}
+
+ul li:nth-child(2n + 2) {
+  margin-left: 15px;
+}
+
+ul li:hover,
+ul li:active {
+  color: #2cc44c;
+  cursor: pointer;
+}
+
+.header {
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px 0px;
+}

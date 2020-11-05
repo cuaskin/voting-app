@@ -1,24 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setData } from 'store/actions';
+import Header from 'components/Header';
+import Layout from 'layout';
 
-const Index = ({ count = 0, setData }) => {
-  const onClick = () => {
-    setData({
-      count: count + 1,
-    });
-  };
+const Index = () => {
   return (
-    <>
-      <h1>Lists of Employee</h1>
-      <p>{count}</p>
-      <button onClick={onClick}>count +</button>
-    </>
+    <Layout>
+      <Header />
+    </Layout>
   );
 };
 
-const mapStateToProps = (state) => ({
-  count: state.count,
-});
-
-export default connect(mapStateToProps, { setData })(Index);
+export default Index;

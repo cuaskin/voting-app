@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import withReduxStore from 'hoc/withReduxStore';
 
+import 'static/sass/index.scss';
+
 interface AppProps {
   reduxStore: Store;
 }
