@@ -36,11 +36,19 @@ const fetchGraphQL = (body) => {
 };
 
 export const fetchMutation: FetchMutation = (body) => {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
     const res = await fetchGraphQL(body);
     if (!isServer && res) {
-      await dispatch(setData(res));
-      return res;
+      const employee = res.data.patchEmployee;
+      console.log('getState', res.data.patchEmployee);
+      const allEmployee = getState().allEmployee.map((o: IDataEmployee) => {
+        if (o?.id === employee?.id) {
+          return { ...o, vote: employee.vote };
+        }
+        return o;
+      });
+      await dispatch(setData({ allEmployee }));
+      return allEmployee;
     }
     return {};
   };
@@ -49,7 +57,6 @@ export const fetchMutation: FetchMutation = (body) => {
 export const fetchQuery: FetchQuery = (body) => {
   return async (dispatch) => {
     const res = await fetchGraphQL(body);
-    console.log('res', res);
     await dispatch(setData(res.data));
     return res;
   };

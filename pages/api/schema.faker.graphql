@@ -20,7 +20,7 @@ type Employee {
   gender: String @examples(values: ["male", "female"])
   email: String @fake(type: email, locale: en_US)
   phone: String @fake(type: phoneNumber, locale: en_US)
-  vote: Int @fake(type: number, options: { minNumber: 0, maxNumber: 0 })
+  vote: Int @fake(type: number, options: { minNumber: 0, maxNumber: 180 })
   address: String
     @fake(type: streetAddress, locale: en_US, options: { useFullAddress: true })
 }

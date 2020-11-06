@@ -10,11 +10,11 @@ interface GraphQLVariables {
 }
 
 interface FetchMutation {
-  (body: GraphQLParams, message?: string): ThunkAction<AsyncDispatch>;
+  (body: GraphQLParams): ThunkAction<AsyncDispatch>;
 }
 
 interface FetchQuery {
-  (body?: GraphQLParams, storeNames?: object): ThunkAction<AsyncDispatch>;
+  (body?: GraphQLParams): ThunkAction<AsyncDispatch>;
 }
 
 interface AsyncDispatch {

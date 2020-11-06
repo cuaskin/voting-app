@@ -65,6 +65,11 @@ tr:hover {
   position: relative;
   transition: all 0.3s ease-out;
   overflow: hidden;
+
+  &:hover {
+    color: #fff;
+    background-color: black;
+  }
 }
 
 .profile {
