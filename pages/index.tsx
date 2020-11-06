@@ -1,15 +1,15 @@
 import React from 'react';
-import { NextPage } from 'next';
-import { connect } from 'react-redux';
-import { setData, fetchQuery } from 'store/actions';
+import { fetchQuery } from 'store/actions';
+
 import Header from 'components/Header';
 import Layout from 'layout';
 import allEmployee from 'graphql/query/allEmployee';
+import DataTable from 'components/DataTable';
 
 const Index = () => {
   return (
     <Layout>
-      <Header />
+      <DataTable />
     </Layout>
   );
 };

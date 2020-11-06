@@ -13,21 +13,21 @@
 
 type Employee {
   id: ID
-  avatarUrl: String @fake(type: avatarUrl, locale: tr)
-  title: String @fake(type: jobTitle, locale: tr)
-  firstName: String @fake(type: firstName, locale: tr)
-  lastName: String @fake(type: lastName, locale: tr)
+  avatarUrl: String @fake(type: avatarUrl, locale: en_US)
+  title: String @fake(type: jobTitle, locale: en_US)
+  firstName: String @fake(type: firstName, locale: en_US)
+  lastName: String @fake(type: lastName, locale: en_US)
   gender: String @examples(values: ["male", "female"])
-  email: String @fake(type: email, locale: tr)
-  phone: String @fake(type: phoneNumber, locale: tr)
+  email: String @fake(type: email, locale: en_US)
+  phone: String @fake(type: phoneNumber, locale: en_US)
   vote: Int @fake(type: number, options: { minNumber: 0, maxNumber: 0 })
   address: String
-    @fake(type: streetAddress, locale: tr, options: { useFullAddress: true })
+    @fake(type: streetAddress, locale: en_US, options: { useFullAddress: true })
 }
 
 type Query {
   getEmployee(id: ID): Employee
-  allEmployee: [Employee] @listLength(min: 25, max: 180)
+  allEmployee: [Employee] @listLength(min: 10, max: 180)
 }
 
 type Mutation {

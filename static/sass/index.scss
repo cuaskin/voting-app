@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './header.scss';
+@import './content.scss';
 
 * {
   box-sizing: border-box;
@@ -18,4 +19,10 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

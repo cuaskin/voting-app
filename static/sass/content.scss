@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+.content {
+  padding-top: 50px;
+  margin: 15px auto;
+  width: 65%;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border: none !important;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+td:last-child,
+th:last-child {
+  text-align: center;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+th:first-child {
+  width: 50px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.vote-btn {
+  cursor: pointer;
+  appearance: none;
+  border-radius: 10px;
+  border: 0;
+  background: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}

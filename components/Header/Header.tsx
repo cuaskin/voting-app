@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
-const Header: FC = () => {
+const Header = () => {
   return (
-    <div className="header">
+    <div className="header sticky">
       <ul>
         <li>Employees</li>
         <li>Logs</li>

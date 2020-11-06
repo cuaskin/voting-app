@@ -25,5 +25,12 @@ ul li:active {
 
 .header {
   height: 50px;
+  font-size: $font-size-header;
+  font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px 0px;
+  background-color: cornsilk;
+  width: 100%;
+  padding: 30px;
+  position: fixed;
+  z-index: 1;
 }
