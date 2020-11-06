@@ -49,6 +49,7 @@ export const fetchMutation: FetchMutation = (body) => {
 export const fetchQuery: FetchQuery = (body) => {
   return async (dispatch) => {
     const res = await fetchGraphQL(body);
+    console.log('res', res);
     await dispatch(setData(res.data));
     return res;
   };

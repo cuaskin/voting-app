@@ -6,3 +6,10 @@ interface IDataEmployee {
   lastName: string;
   vote: number;
 }
+
+interface IDataProfile extends IDataEmployee {
+  gender: string;
+  email: string;
+  phone: string;
+  address: string;
+}

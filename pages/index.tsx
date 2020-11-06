@@ -1,9 +1,8 @@
 import React from 'react';
 import { fetchQuery } from 'store/actions';
-
-import Header from 'components/Header';
-import Layout from 'layout';
 import allEmployee from 'graphql/query/allEmployee';
+
+import Layout from 'layout';
 import DataTable from 'components/DataTable';
 
 const Index = () => {

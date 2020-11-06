@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Router } from 'routes';
 
 import Vote from 'components/Vote';
 import Avatar from 'components/Avatar';
@@ -8,9 +9,12 @@ interface RowProps {
 }
 
 const Row: FC<RowProps> = ({ rowData }) => {
+  const onClick = () => {
+    Router.pushRoute(`/profile/${rowData.id}`);
+  };
   return (
     <tr>
-      <td>
+      <td onClick={onClick}>
         <Avatar rowData={rowData} />
       </td>
       <td>{rowData.title}</td>

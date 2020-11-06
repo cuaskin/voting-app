@@ -10,7 +10,7 @@ export default `
             email,
             phone,
             vote,
-            adress  
+            address  
         }
     }
 `;
