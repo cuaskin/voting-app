@@ -4,12 +4,8 @@ import { isServer, isProd } from 'helpers/utils';
 import fetch from 'node-fetch';
 import _ from 'lodash';
 
-const {
-  LOCAL_GRAPHQL_HOST,
-  TEST_GRAPHQL_HOST,
-} = getConfig().publicRuntimeConfig;
-
-const GRAPHQL_API = isServer && isProd ? TEST_GRAPHQL_HOST : LOCAL_GRAPHQL_HOST;
+const { LOCAL_GRAPHQL_HOST } = getConfig().publicRuntimeConfig;
+const GRAPHQL_API = LOCAL_GRAPHQL_HOST;
 
 export const setData = (data: any) => ({
   type: types.SET_DATA,

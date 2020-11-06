@@ -12,7 +12,6 @@ const Header = () => {
         >
           Employees
         </li>
-        <li>Logs</li>
       </ul>
     </div>
   );
